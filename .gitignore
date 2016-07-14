@@ -1,0 +1,33 @@
+#For Gral
+
+*.zip
+*.rar
+*.tar.gz
+*.tar.xz
+
+
+#Uncoment to prevent conflicts when +1 devs are pushing
+
+styles.css
+styles.css.map
+libs.js
+
+
+#For Dev
+
+.sass-cache
+node_modules
+bower_components
+
+
+#For Design
+
+editable/
+*-editable.png
+*-editable.svg
+*-editable.pdf
+*.psd
+*.ai
+*.ind
+*.raw
+*.nef
