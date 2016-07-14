@@ -1,0 +1,73 @@
+/* Custom Theme */
+
+/* Edit, Ok and Cancel buttons box */
+.ct-widget.ct-ignition {
+	top: 5px;
+	left: 7px;
+	z-index: 999999;
+}
+
+/* Pencil "edit" button */
+.ct-widget .ct-ignition__button--edit {
+	background-color: #0CACFC;
+	width: 48px !important;
+	height: 48px !important;
+	border-radius: 48px !important;
+	font-size: 20px !important;
+	line-height: 48px !important;
+	left: 10px;
+	top: 10px;
+	
+}
+
+.ct-widget .ct-ignition__button--cancel {
+	left: 45px;
+}
+
+.ct-widget .ct-ignition__button {
+	border-radius: 40px;
+	height: 35px;
+	width: 35px;
+	font-size: 12px;
+	line-height: 35px;
+}
+
+/* WYSYWYG panel */
+.ct-widget.ct-toolbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	padding: 1px;
+	text-align: right;
+	/* background-color: #D3EDFE; */
+	background-color: rgba(255,255,255,0.95);
+	border: none;
+}
+
+/* Groups inside panel */
+.ct-widget .ct-tool-group {
+	// background-color: gray;
+	display: inline-block;
+	padding: 0;
+	display: none;
+}
+
+/* First and Last group */
+.ct-widget .ct-tool-group:first-child,
+.ct-widget .ct-tool-group:last-child {
+	display: inline-block;
+}
+
+/* Buttons inside group */
+.ct-tool.ct-tool--align-left,
+.ct-tool.ct-tool--align-center,
+.ct-tool.ct-tool--align-right {
+	display: none;
+}
+
+/* Grip (dragging box) */
+.ct-widget .ct-toolbox__grip {
+	display: none !important;
+}

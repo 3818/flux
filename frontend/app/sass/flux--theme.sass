@@ -1,0 +1,65 @@
+$flux-theme-primary: #068CE5
+$flux-theme-secondary: #9FC464
+$flux-theme-error: #f03f4b
+$flux-theme-warning: #F3BF25
+
+.flux
+	&-goto-login
+		background-color: $flux-theme-primary
+
+	&-login
+		background-color: transparentize($flux-theme-primary, 0.1)
+
+	&-login-close
+		background-color: $flux-theme-error
+
+	&-cta
+		background-color: $flux-theme-primary
+
+		&:hover
+			background-color: darken($flux-theme-primary, 10%)
+
+	&-edit
+		background-color: $flux-theme-primary
+
+	&-panel
+		border-top: 5px solid lighten($flux-theme-primary, 30%)
+		background-color: lighten($flux-theme-primary, 45%)
+
+	&-restore
+		background-color: $flux-theme-error
+		&:hover
+			background-color: darken($flux-theme-error, 20%)
+
+	&-dashboard-trigger
+		&.active
+			background-color: $flux-theme-secondary
+			color: #fff
+
+	&-checkbox
+		background-color: $flux-theme-secondary
+
+	&-section-name
+		background-color: $flux-theme-secondary
+
+.section-box
+
+	&.editing
+		border-top: 5px solid $flux-theme-secondary
+
+		&.inactive
+			border-top: 5px solid $flux-theme-error
+			background-color: darken($flux-theme-error, 20%)
+
+	&.inactive
+
+		.flux-checkbox
+			background-color: $flux-theme-error
+
+		.flux-section-name
+			background-color: $flux-theme-error
+
+body
+
+	&.editing
+		background-color: lighten($flux-theme-primary, 30%)

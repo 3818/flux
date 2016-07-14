@@ -1,0 +1,35 @@
+.flux-goto-login { background-color: #068CE5; }
+
+.flux-login { background-color: rgba(6, 140, 229, 0.9); }
+
+.flux-login-close { background-color: #f03f4b; }
+
+.flux-cta { background-color: #068CE5; }
+
+.flux-cta:hover { background-color: #056eb3; }
+
+.flux-edit { background-color: #068CE5; }
+
+.flux-panel { border-top: 5px solid #88cefc; background-color: #d3edfe; }
+
+.flux-restore { background-color: #f03f4b; }
+
+.flux-restore:hover { background-color: #ba0f1a; }
+
+.flux-dashboard-trigger.active { background-color: #9FC464; color: #fff; }
+
+.flux-checkbox { background-color: #9FC464; }
+
+.flux-section-name { background-color: #9FC464; }
+
+.section-box.editing { border-top: 5px solid #9FC464; }
+
+.section-box.editing.inactive { border-top: 5px solid #f03f4b; background-color: #ba0f1a; }
+
+.section-box.inactive .flux-checkbox { background-color: #f03f4b; }
+
+.section-box.inactive .flux-section-name { background-color: #f03f4b; }
+
+body.editing { background-color: #88cefc; }
+
+/*# sourceMappingURL=flux--theme.css.map */

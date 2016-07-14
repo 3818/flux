@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta charset="UTF-8">
+<title>FLUX®</title>
+<meta name="description" content="Your Single page website. Simple, Smart &amp; Exclusive. Every Small Business have a story to tell. Tell us your story, let's make it visual with FLUX®">
+<meta name="robots" content="index,follow">
+<!-- Responsive and Phone -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<!-- Open Graph Meta -->
+<meta property="og:site_name" content="FLUX®">
+<meta property="og:title" content="Your Single page website. Simple, Smart &amp; Exclusive.">
+<meta property="og:description" content="Every Small Business have a story to tell. Tell us your story, let's make it visual with FLUX®">
+<meta property="og:image" content="http://www.getfluxnow.com/metaimg.jpg">
+<meta property="og:url" content="http://www.getfluxnow.com">
+<meta property="og:type" content="website">
+<!-- App color & img -->
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png?nocache">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png?nocache">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png?nocache">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png?nocache">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png?nocache">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?nocache">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png?nocache">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?nocache">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?nocache">
+<link rel="icon" type="image/png" href="/favicon-32x32.png?nocache" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png?nocache" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png?nocache" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png?nocache" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?nocache" color="#444444">
+<meta name="apple-mobile-web-app-title" content="Flux">
+<meta name="application-name" content="Flux">
+<meta name="msapplication-TileColor" content="#444444">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png?nocache">
+<meta name="theme-color" content="#444444">
+<!-- Styles -->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/swiper.css">
+<link rel="stylesheet" href="css/headlines.css">
+<link rel="stylesheet" href="css/form-elements.css">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet" type="text/css">
+<!-- Styles for admin and edition -->
+<link rel="stylesheet" href="css/flux.css">
+<link rel="stylesheet" href="css/flux--theme.css">
+<!-- <link rel="stylesheet" href="css/flux-admin.css"> -->
+<link rel="stylesheet" href="css/content-tools.min.css">
+<link rel="stylesheet" href="css/content-tools--theme.css">
+<script src="js/modernizr.js"></script><script src="https://www.google.com/recaptcha/api.js" async defer></script><!-- Modernizr -->
+</head>
+<body>
+	<i id="top"></i>
+	<div class="flux-edit-container">
+		<a href="#top" class="flux-edit js-flux-edit">
+			<span class="trigger"><i class="fa fa-lock fa-fw"></i> <em>log in</em>
+			</span>
+			<!-- <i></i> -->
+		</a>
+	</div>
+	<!-- init login form -->
+	<div id="login_layer" class="flux-login">
+		<form method="post" action="php/process.php" id="flux-login">
+			<span class="flux-login-close"><i class="fa fa-times fa-fw"></i></span>
+			<input id="flux-login-user" type="text" placeholder="username" name="user" class="cta-input field required">
+			<input id="flux-login-pass" type="password" placeholder="password" name="pass" class="cta-input field requiredother">
+			<input type="hidden" name="edit" value="true" class="cta-input">
+			<span class="error-msg error"></span>
+			<input type="submit" value="Log In" class="flux-cta" id="submitLogin">
+		</form>
+	</div>
+	<!-- end login form -->
+	<!-- init save form -->
+	<div id="save_layer" class="flux-save">
+		<div class="flux-panel">
+			<a href="http://getfluxnow.com" target="_blank"><img class="flux-logo" src="img/flux/flux_blue.svg" alt="Flux logo"></a>
+			<form method="post" action="php/process.php" id="save_form">
+				<ul class="flux-navigation">
+					<input type="submit" name="Restore" value="Restore to Original version" title="Warning! Back to original version" class="flux-cta flux-restore">
+					<input type="submit" name="Export" value="Download .zip" title="Download a .zip" class="flux-cta flux-export">
+					<input type="submit" name="Finish" value="Finish &amp; Log Out" title="Logout without save" class="flux-cta flux-finish">
+				</ul>
+			</form>
+		</div>
+	</div>
+	<!-- end save form -->
+	<div class="flux-content">
+		<nav class="navigation">
+			<div class="wrapper lg">
+				<a href="#top" class="logo" title="FLUX®"><img src="img/flux.svg" alt="Flux logo"></a>
+				<!-- <a href="#top" class="flux-goto-login">Log in <i class="fa fa-sign-in"></i></a> -->
+			</div>
+		</nav>
+		<header class="hero">
+			<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+			<div class="background_container">
+				<!-- Swiper -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" style="background-image: url('img/bg/business.jpg')"></div>
+						<div class="swiper-slide" style="background-image: url('img/bg/portfolio.jpg')"></div>
+						<div class="swiper-slide" style="background-image: url('img/bg/product.jpg')"></div>
+						<div class="swiper-slide" style="background-image: url('img/bg/events.jpg')"></div>
+					</div>
+				</div>
+				<div class="plinth p-hero-v"></div>
+			</div>
+
+			<div class="wrapper lg">
+				<div class="description">
+					<h1 class="cd-headline slide">
+						<span>Every</span>
+						<span class="cd-words-wrapper">
+							<b class="is-visible col-business">Small Business</b>
+							<b class="col-portfolio">Portfolio</b>
+							<b class="col-product">Product</b>
+							<b class="col-event">Event</b>
+						</span>
+						<br><span>has a story to tell.</span>
+					</h1>
+					<div id="title-hero" data-editable data-name="title-hero">
+						<p class="subtitle">
+								Let`s make it visual with FLUX®, your Single page website. Simple. Smart. Exclusive.
+						</p>
+						<a class="cta light trigger-request" href="demo/#admin">Try it</a>
+						<a class="cta dark" href="#contact">Start Now</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="plinth p-hero"></div>
+		</header>
+		<article class="design">
+			<div class="wrapper lg">
+				<div id="title-design" data-editable data-name="title-design">
+					<h2 class="title">Let`s tell your story with a handcrafted design and development</h2>
+					<p class="subtitle">
+						Because it’s design that improves conversion. We work to give you solutions according to your needs, always focusing on getting the best results.
+					</p>
+				</div>
+			</div>
+
+			<div class="layers_container">
+				<div class="wrapper lg">
+					<div class="labels anim">
+						<span class="item anim">User Experience <i></i></span>
+						<span class="item hide anim">, </span>
+						<span class="item anim">Development <i></i></span>
+						<span class="item hide anim">&amp;</span>
+						<span class="item anim">Design <i></i></span>
+					</div>
+				</div>
+
+				<div class="layers anim">
+					<img src="img/layers/shadow.jpg" alt="Flux Shadow" class="layer-4 anim"><img src="img/layers/ux.png" alt="Flux UX" class="layer-3 anim"><img src="img/layers/development.png" alt="Flux Development" class="layer-2 anim"><img src="img/layers/design.png" alt="Flux Design" class="layer-1 anim">
+				</div>
+			</div>
+			<div class="plinth p-design"></div>
+		</article>
+		<article class="devices">
+			<div class="wrapper lg">
+				<div id="title-devices" data-editable data-name="title-devices">
+					<h2 class="title">Engage your users with a unique experience</h2>
+					<p class="subtitle">
+						We create each experience by focusing on responsive design.
+						<br>
+						We believe that it’s the best way to achieve great results.
+					</p>
+				</div>
+			</div>
+			<div class="devices_container">
+				<div class="devices wrapper lg">
+					<img src="img/devices/desktop.png" alt="Flux Desktop" class="device-1 anim"><img src="img/devices/tablet.png" alt="Flux Tablet" class="device-2 anim"><img src="img/devices/mobile.png" alt="Flux Mobile" class="device-3 anim">
+				</div>
+			</div>
+			<div class="plinth p-devices"></div>
+		</article>
+		<article class="features wrapper xxl">
+			<div class="feature">
+				<img src="img/features/singlepage.jpg" alt="Flux Single Page">
+				<div class="texts_container">
+					<div class="texts">
+						<div id="title-feature1" data-editable data-name="title-feature1">
+							<h2 class="title">OK. Why single page?</h2>
+							<p class="subtitle">
+								Single-page websites are often highly designed, because they get one chance – one impression – to grab a user’s attention in a cluttered visual landscape.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="feature dark">
+				<img src="img/features/report.jpg" alt="Flux Single Page"><div class="texts_container">
+					<div class="texts">
+						<div id="title-feature2" data-editable data-name="title-feature2">
+							<h2 class="title">Smart data collection reports</h2>
+							<p class="subtitle">
+								We love to see where your users are being engaged most effectively. We track every step, so you can transform your prospects into clients!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="feature">
+				<img src="img/features/editor.jpg" alt="Flux Single Page">
+				<div class="otf">
+					<h2 class="cd-headline letters type">
+						<span>Edit your</span>
+						<span class="cd-words-wrapper waiting">
+							<b class="is-visible">texts</b>
+							<b>words</b>
+						</span>
+					</h2>
+				</div>
+				<div class="texts_container">
+					<div class="texts">
+						<div id="title-feature3" data-editable data-name="title-feature3">
+							<h2 class="title">Easy OTF editor</h2>
+							<p class="subtitle">
+								With the OTF Editor, you can edit text content but limit photo editing capabilities, which is especially important for those who are not designers.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="plinth p-features"></div>
+		</article>
+		<article class="services">
+			<div class="wrapper lg">
+				<div id="title-services" data-editable data-name="title-services">
+					<h2 class="title">We will create a visual journey for you</h2>
+					<p class="subtitle">
+						Everything has a backstory. We can help you tell yours.
+					</p>
+				</div>
+			</div>
+
+			<div class="service_container wrapper lg">
+
+				<div class="service air se-event">
+					<div class="item">
+						<div class="velo se-event"></div>
+						<img src="img/icons/ic_volume_up_white_24px.svg" alt="Flux event icon">
+					</div>
+					<p>Special Event</p>
+				</div>
+
+				<div class="service air se-product">
+					<div class="item">
+						<div class="velo"></div>
+						<img src="img/icons/ic_motorcycle_white_24px.svg" alt="Flux product icon">
+					</div>
+					<p>Product Launch</p>
+				</div>
+
+				<div class="service air se-business">
+					<div class="item">
+						<div class="velo"></div>
+						<img src="img/icons/ic_room_service_white_24px.svg" alt="Flux business icon">
+					</div>
+					<p>Small Business</p>
+				</div>
+
+				<div class="service air se-portfolio">
+					<div class="item">
+						<div class="velo"></div>
+						<img src="img/icons/ic_mode_edit_white_24px.svg" alt="Flux portfolio icon">
+					</div>
+					<p>Portfolio</p>
+				</div>
+
+				<div class="service air se-print">
+					<div class="item">
+						<div class="velo se-event"></div>
+						<img src="img/icons/ic_print_white_24px.svg" alt="Flux print icon">
+					</div>
+					<p>Print Campaign</p>
+				</div>
+
+				<div class="service air se-app">
+					<div class="item">
+						<div class="velo"></div>
+						<img src="img/icons/ic_build_white_24px.svg" alt="Flux app icon">
+					</div>
+					<p>App downloads</p>
+				</div>
+
+				<div class="service air se-startup">
+					<div class="item">
+						<div class="velo"></div>
+						<img src="img/icons/ic_work_white_24px.svg" alt="Flux startup icon">
+					</div>
+					<p>Startups</p>
+				</div>
+
+				<div class="service air se-site">
+					<div class="item">
+						<div class="velo"></div>
+						<img src="img/icons/ic_thumb_up_white_24px.svg" alt="Flux site icon">
+					</div>
+					<p>Site Promotion</p>
+				</div>
+
+			</div>
+		</article>
+		<article class="contact">
+			<div class="bg"></div>
+			<div class="plinth p-contact"></div>
+			<div class="plinth p-contact-v"></div>
+
+			<div class="wrapper sm" id="contact">
+				<div id="title-contact" data-editable data-name="title-contact">
+					<h2 class="title">Are you ready to tell your story?</h2>
+					<p class="subtitle">
+						Let´s see if FLUX® is right for you <br>Starting from $1,499
+					</p>
+				</div>
+				<a class="cta light request-demo trigger-request" href="demo/#admin">Try it</a>
+				<p class="subtitle">
+					or...
+				</p>
+			</div>
+
+		<div class="wrapper sm">
+			<div class="box_form air">
+				<form id="surveyForm">
+
+					<!-- FS-1 -->
+					<fieldset class="fs fs1 active">
+						<span class="step">1/7</span>
+						<h3 class="title">Tell us about your needs… Kind of website:</h3>
+						<ul>
+							<li for="new-site">
+								<input type="radio" id="site-new" name="siteNeed" value="new"><label for="site-new">New site</label>
+							</li>
+							<li>
+								<input type="radio" id="site-adapt" name="siteNeed" value="adapt"><label for="site-adapt">Adapt existing</label>
+							</li>
+						</ul>
+					</fieldset>
+
+					<!-- FS-2 -->
+					<fieldset class="fs fs2">
+						<span class="step">2/7</span>
+						<h3 class="title">Tell us the kind of business you are in:</h3>
+						<a href="#nada" class="previous"><i class="fa fa-angle-left"></i> Previous</a>
+						<ul>
+							<li for="new-site">
+								<input type="radio" id="type-event" name="siteType" value="event"><label for="type-event">Events</label>
+							</li>
+							<li>
+								<input type="radio" id="type-launch" name="siteType" value="launch"><label for="type-launch">Launch a Product / Service</label>
+							</li>
+							<li>
+								<input type="radio" id="type-ecommerce" name="siteType" value="ecommerce"><label for="type-ecommerce">E-Commerce</label>
+							</li>
+							<li>
+								<input type="radio" id="type-business" name="siteType" value="business"><label for="type-business">Small business</label>
+							</li>
+							<li>
+								<input type="radio" id="type-startup" name="siteType" value="startup"><label for="type-startup">Startup</label>
+							</li>
+							<li>
+								<input type="radio" id="type-portfolio" name="siteType" value="portfolio"><label for="type-portfolio">Portfolio / Author</label>
+							</li>
+							<li>
+								<input type="radio" id="type-print" name="siteType" value="print"><label for="type-print">Print Campaign</label>
+							</li>
+							<li>
+								<input type="radio" id="type-app" name="siteType" value="app"><label for="type-app">App Download</label>
+							</li>
+							<li>
+								<input type="radio" id="type-promotion" name="siteType" value="promotion"><label for="type-promotion">Promotion Site / Contact</label>
+							</li>
+							<li>
+								<input type="radio" id="type-other" name="siteType" value="other"><label for="type-other">Other</label>
+							</li>
+						</ul>
+					</fieldset>
+
+					<!-- FS-3 -->
+					<fieldset class="fs fs3">
+						<span class="step">3/7</span>
+						<h3 class="title">About your handcrafted FLUX design:</h3>
+						<a href="#nada" class="previous"><i class="fa fa-angle-left"></i> Previous</a>
+						<ul>
+							<li for="new-site">
+								<input type="radio" id="design-custom" name="siteDesign" value="custom"><label for="design-custom">I need a uniquely hand-crafted design.</label>
+							</li>
+							<li>
+								<input type="radio" id="design-template" name="siteDesign" value="template"><label for="design-template">I want to adapt an existing design.</label>
+							</li>
+						</ul>
+					</fieldset>
+
+					<!-- FS-4 -->
+					<fieldset class="fs fs4">
+						<span class="step">4/7</span>
+						<h3 class="title">Do you have the content (pictures, text, etc) of the site?</h3>
+						<a href="#nada" class="previous"><i class="fa fa-angle-left"></i> Previous</a>
+						<ul>
+							<li for="new-site">
+								<input type="radio" id="content-yes" name="siteContent" value="yes"><label for="content-yes">Yes, I have all content.</label>
+							</li>
+							<li>
+								<input type="radio" id="content-some" name="siteContent" value="some"><label for="content-some">Just some stuff.</label>
+							</li>
+							<li>
+								<input type="radio" id="content-no" name="siteContent" value="no"><label for="content-no">I have nothing, please help!</label>
+							</li>
+						</ul>
+					</fieldset>
+
+					<!-- FS-5 -->
+					<fieldset class="fs fs5">
+						<span class="step">5/7</span>
+						<h3 class="title">We love to tell strong stories, how important is your brand / business for you?</h3>
+						<a href="#nada" class="previous"><i class="fa fa-angle-left"></i> Previous</a>
+						<ul>
+							<li for="new-site">
+								<input type="radio" id="importance-high" name="siteImportance" value="high"><label for="importance-high">Defines who I am.</label>
+							</li>
+							<li>
+								<input type="radio" id="importance-normal" name="siteImportance" value="normal"><label for="importance-normal">It´s important.</label>
+							</li>
+							<li>
+								<input type="radio" id="importance-low" name="siteImportance" value="low"><label for="importance-low">Not a big deal. It´s just a logo.</label>
+							</li>
+						</ul>
+					</fieldset>
+
+					<!-- FS-6 -->
+					<fieldset class="fs fs6">
+						<span class="step">6/7</span>
+						<h3 class="title">Do you think a FLUX single page would be best for you?</h3>
+						<a href="#nada" class="previous"><i class="fa fa-angle-left"></i> Previous</a>
+						<ul>
+							<li for="new-site">
+								<input type="radio" id="single-yes" name="siteSingle" value="yes"><label for="single-yes">Yes, it´s just what I need.</label>
+							</li>
+							<li>
+								<input type="radio" id="single-no" name="siteSingle" value="no"><label for="single-no">Hmm… maybe I need a few more pages.</label>
+							</li>
+						</ul>
+					</fieldset>
+
+					<!-- FS-7 -->
+					<fieldset class="fs fs7 fs-validate">
+						<span class="step">7/7</span>
+						<h3 class="title">At last, do you have a launch date?</h3>
+						<a href="#nada" class="previous"><i class="fa fa-angle-left"></i> Previous</a>
+						<ul>
+							<li for="new-site">
+								<input type="radio" id="time-fast" name="siteTime" value="fast"><label for="time-fast">Yes, ASAP!</label>
+							</li>
+							<li>
+								<input type="radio" id="time-slow" name="siteTime" value="slow"><label for="time-slow">No, I´m not in a hurry</label>
+							</li>
+						</ul>
+					</fieldset>
+
+					<fieldset class="fs notforyou">
+						<h3 class="title">Bummer! You might need something else:</h3>
+						<a href="#nada" class="previous edit"><i class="fa fa-pencil"></i> Edit</a>
+						<p>But we can help you with our associates.</p>
+						<div class="solution">
+							<a href="http://3818.com.ar/" target="_blank" class="tresocho"><img src="img/3818.svg" alt="3818 Logo"><i class="fa fa-check recomended"></i></a>
+							<p>Full service agency</p>
+						</div>
+						<div class="solution">
+							<a href="http://moyobi.com/" target="_blank" class="moyobi"><img src="img/moyobi.svg" alt="Moyobi Logo"><i class="fa fa-check recomended"></i></a>
+							<p>Ecommerce</p>
+						</div>
+					</fieldset>
+					<fieldset class="fs isforyou">
+						<span class="step ok"><i class="fa fa-check"></i></span>
+						<h3 class="title ok">HORRAY! Flux<sup>®</sup> is perfect for you!</h3>
+						<a href="#nada" class="previous edit"><i class="fa fa-pencil"></i> Edit</a>
+						<p>Now we just need your data. Chop chop! We have a story to tell.</p>
+
+						<div class="field_container">
+							<div class="field_block fc1">
+								<label for="surveyForm-name">Name</label>
+								<input type="text" id="surveyForm-name" name="name" value="" placeholder="Ex: John Doe" class="field required">
+							</div>
+							<div class="field_block fc2">
+								<label for="surveyForm-email">E-mail</label>
+								<input type="text" id="surveyForm-email" name="email" value="" placeholder="Ex: johndoe@mail.com" class="field requiredemail">
+							</div>
+						</div>
+
+						<div class="send-msg">
+							<h3 class="title"></h3>
+						</div>
+
+						<div class="send-area">
+							<div class="gch">
+								<div class="g-recaptcha" data-sitekey="6LfB8gETAAAAAEfuSSpoamDUXT6T_n051_P2Gu_n"></div>
+							</div>
+							<a href="#submiting" id="submitSurvey" class="cta dark">Submit</a>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</article>
+	<div class="requestdemo-container">
+		<div class="requestdemo">
+			<span class="close"><i class="fa fa-times fa-fw"></i></span>
+			<form id="demoForm">
+				<input type="text" id="demoForm-name" name="fName" placeholder="Your name" class="field required">
+				<input type="email" id="demoForm-email" name="email" placeholder="someone@example.com" class="field requiredemail">
+				<span class="error-msg error"></span>
+				<a href="#submit" id="submitDemo">Request a demo</a>
+			</form>
+			<div class="check-demo">
+				<div class="title">
+					<h3 class="title">
+						Thanks for your interest.
+					</h3>
+					<p class="description">
+						The link to the demo was sent to your e-mail.
+					</p>
+					<i class="fa fa-envelope-o"></i>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<footer>
+		<div class="wrapper md air">
+			<a href="http://www.3818.com.ar/" target="_blank" class="logo"><img src="img/3818.svg" alt="Logo 3818 SRL" title="Go to 3818 SRL"></a>
+			<div id="title-copyright" data-editable data-name="title-copyright">
+				<p>Copyright © 2011-2016 - 3818 SRL. All Rights Reserved. <br> 1511 E. State Road 434, Winter Springs 32708, Florida, US - <a href="https://goo.gl/maps/c7oyjYK7Vw72" target="_blank">(view map)</a></p>
+			</div>
+		</div>
+		<a href="#top" class="gotop"><img src="img/icons/ic_keyboard_arrow_up_white_24px.svg" alt="Top"></a>
+	</footer>
+	<script src="js/libs.js" type="text/javascript"></script>
+	<script src="js/flux.js" type="text/javascript"></script>
+	<script src="js/content-tools.min.js" type="text/javascript"></script>
+
+	<!-- NO BORRAR LA LINEA DE ABAJO -->
+	<!-- editor js -->
+	</div>
+</body>
+</html>
