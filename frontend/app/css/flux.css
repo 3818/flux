@@ -52,6 +52,10 @@
 
 .fx-lightbox__box--help.is-active { transform: scale(1); opacity: 1; }
 
+.fx-lightbox__blocklink { display: block; margin-top: 20px; font-size: 0.8rem; color: #37474f; }
+
+.fx-lightbox__blocklink:hover { color: #4db6ac; }
+
 .fx-lightbox__description { display: none; padding-bottom: 10px; }
 
 .fx-lightbox__description h3 { color: #37474f; }
@@ -68,15 +72,13 @@
 
 .fx-logintrigger__button { transition: all 0.2s ease 0s; display: none; margin-right: auto; margin-left: auto; padding-left: 20px; padding-right: 20px; background-color: #37474f; color: #fff; text-transform: uppercase; text-align: center; font-size: 1rem; cursor: pointer; }
 
-.fx-editor { transition: all 0.4s ease 0s; position: fixed; z-index: 1002; bottom: 0; left: 0; right: 0; display: none; transform: translateY(110px); }
+.fx-editor { position: fixed; top: 0; left: 0; right: 0; height: 5px; display: none; background-color: #94a5b0; }
 
-@media screen and (max-width: 500px) { .fx-editor { transition: none; } }
+.fx-editor.is-editing { display: block; }
 
-.fx-editor.is-editing { transform: translateY(0); }
+.fx-editor__panel { transition: transform 0.3s ease-out 0s, padding 0.6s ease 0s; position: fixed; z-index: 1002; bottom: 0; left: 0; right: 0; width: 100%; transform: translateY(110px); display: block; padding: 10px 40px; background-color: #eceff1; border-top: 5px solid #94a5b0; border-bottom: 1px solid #b1bec6; text-align: right; }
 
-.fx-editor.is-editing .fx-editor__panel { padding: 10px 10px; }
-
-.fx-editor__panel { transition: all 0.4s ease 0.1s; display: block; padding: 10px 40px; background-color: #eceff1; border-top: 5px solid #94a5b0; border-bottom: 1px solid #b1bec6; text-align: right; }
+.fx-editor__panel.is-editing { transform: translateY(0); padding: 10px 10px; }
 
 .fx-editor__panel .fx-cta { margin-left: 5px; padding: 0.8rem 1rem; }
 
@@ -88,7 +90,7 @@
 
 .fx-editor__restore:hover { background-color: #ba0f1a; }
 
-.fx-editor__logo { transition: all 1.5s ease 0s; display: inline-block; transition: all 0.4s ease 0.3s; float: left; margin-left: 0 !important; background-color: #eceff1; border: 1px solid #37474f !important; opacity: 0; color: #37474f; }
+.fx-editor__logo { transition: all 3s ease 0s; display: inline-block; transition: all 0.4s ease 0.3s; float: left; margin-left: 0 !important; background-color: #eceff1; border: 1px solid #37474f !important; opacity: 0; color: #37474f; }
 
 .fx-editor__logo::after { content: "Flux"; }
 
@@ -112,7 +114,7 @@
 
 body { position: relative; overflow-x: hidden; transition: all 0.4s ease 0s; margin: 0; }
 
-body.is-editing { padding: 5px; background-color: #7c96a3; }
+body.is-editing { padding: 5px; background-color: #94a5b0; }
 
 .fx-errormsg { width: 100%; display: none; margin-bottom: 10px; padding-right: 10px; padding-left: 10px; padding: 5px; font-size: 14px; text-align: center; }
 

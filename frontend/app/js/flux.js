@@ -108,9 +108,9 @@ function triggerLogin() {
 }
 
 function panelInteraction() {
-	if ( $('.fx-editor').is(':visible') ) {
+	if ( $('.fx-editor').hasClass('is-editing') ) {
 		$('body').addClass('is-editing');
-		var fxpanelHei	= parseInt( $('.fx-editor').innerHeight() );
+		var fxpanelHei	= parseInt( $('.fx-editor__panel').outerHeight() );
 		$('body').css('padding-bottom', ''+fxpanelHei+'px');
 		$('.fx-editor__panel, .fx-editor__logo').addClass('is-editing');
 		setTimeout(function functionName() {

@@ -28,8 +28,8 @@
 	$toReplace = ($exp=='<!-- editor js --><script src="js/editor.js"></script>')?'<!-- editor js -->':'<!-- editor js --><script src="js/editor.js"></script>';
 	//die("Match ? ".$match." <br> exp ".$exp." <br>toReplace ".$toReplace);
 	$newlines = replace($lines, $toReplace, $exp);
-	$exp = ($match)?'<div id="save_layer" class="fx-editor js-fx-editor" style="display: none;">':'<div id="save_layer" class="fx-editor js-fx-editor is-editing" style="display: block;">';
-	$toReplace = ($exp=='<div id="save_layer" class="fx-editor js-fx-editor is-editing" style="display: block;">')?'<div id="save_layer" class="fx-editor js-fx-editor" style="display: none;">':'<div id="save_layer" class="fx-editor js-fx-editor is-editing" style="display: block;">';
+	$exp = ($match)?'<div id="save_layer" class="fx-editor js-fx-editor">':'<div id="save_layer" class="fx-editor js-fx-editor is-editing">';
+	$toReplace = ($exp=='<div id="save_layer" class="fx-editor js-fx-editor is-editing">')?'<div id="save_layer" class="fx-editor js-fx-editor">':'<div id="save_layer" class="fx-editor js-fx-editor is-editing">';
 	$newlines2 = replace($newlines, $toReplace, $exp);
 	file_put_contents($file, $newlines2);
 	//if(isset($todelete)) unlink($todelete); //delete temporal file

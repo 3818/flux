@@ -158,6 +158,16 @@
 					opacity: 1
 
 
+		&__blocklink
+			display: block
+			margin-top: 20px
+			font-size: 0.8rem
+			color: $flux-primary
+
+			&:hover
+				color: $flux-secondary
+
+
 
 		&__description
 			display: none
@@ -227,27 +237,30 @@
 
 
 	&-editor
-		transition: all 0.4s ease 0s
 		position: fixed
-		z-index: 1002
-		bottom: 0
+		top: 0
 		left: 0
 		right: 0
+		height: 5px
 		display: none
-		transform: translateY(110px)
 
-		@media screen and (max-width: 500px)
-			transition: none
+		background-color: darken($flux-default, 30%)
 
 		&.is-editing
-			transform: translateY(0)
+			display: block
 
-			.fx-editor__panel
-				padding: 10px 10px
+
 
 		&__panel
 			@extend %bbx
-			transition: all 0.4s ease 0.1s
+			transition: transform 0.3s ease-out 0s, padding 0.6s ease 0s
+			position: fixed
+			z-index: 1002
+			bottom: 0
+			left: 0
+			right: 0
+			width: 100%
+			transform: translateY(110px)
 			display: block
 
 			padding: 10px 40px
@@ -257,6 +270,10 @@
 
 			text-align: right
 
+			&.is-editing
+				transform: translateY(0)
+				padding: 10px 10px
+
 			.fx-cta
 				margin-left: 5px
 				padding: 0.8rem 1rem
@@ -264,18 +281,24 @@
 				@media screen and (max-width: 500px)
 					padding: 0.6rem 1rem
 
+
+
 		&__export,
 		&__restore
 			@media screen and (max-width: 768px)
 				display: none
+
+
 
 		&__restore
 			background-color: $flux-error
 			&:hover
 				background-color: darken($flux-error, 20%)
 
+
+
 		&__logo
-			transition: all 1.5s ease 0s
+			transition: all 3s ease 0s
 			display: inline-block
 			transition: all 0.4s ease 0.3s
 			float: left
@@ -305,7 +328,6 @@
 				&::after
 					content: "F"
 			// 	display: none
-
 
 			&.is-editing
 				opacity: 1
@@ -348,4 +370,4 @@ body
 
 	&.is-editing
 		padding: 5px
-		background-color: lighten($flux-primary, 30%)
+		background-color: darken($flux-default, 30%)
