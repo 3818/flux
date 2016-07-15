@@ -85,26 +85,15 @@ function hashEvents() {
 function triggerLogin() {
 	$('.js-fx-logintrigger__button').on('click', function(e){
 		e.preventDefault();
-		if ( $(window).width() >= 768 ) {
-			$('.js-fx-lightobx--login').fadeIn('fast').css('display', 'flex');
-		} else {
-			$('.js-fx-lightobx--login').show().css('display', 'flex');
-		}
+		$('.js-fx-lightobx--login').fadeIn('fast').css('display', 'flex');
 		loginVisible();
 	});
 
 	$('.js-fx-lightbox__close').on('click', function(e){
 		e.preventDefault();
-		if ( $(window).width() >= 768 ) {
-			$('.js-fx-lightobx--login').fadeOut('fast');
-		} else {
-			$('.js-fx-lightobx--login').hide();
-		}
-
+		$('.js-fx-lightobx--login').fadeOut('fast');
 		loginVisible();
-
 	});
-
 }
 
 function panelInteraction() {
