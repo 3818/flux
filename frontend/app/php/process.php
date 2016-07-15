@@ -28,8 +28,8 @@
 	$toReplace = ($exp=='<!-- editor js --><script src="js/editor.js"></script>')?'<!-- editor js -->':'<!-- editor js --><script src="js/editor.js"></script>';
 	//die("Match ? ".$match." <br> exp ".$exp." <br>toReplace ".$toReplace);
 	$newlines = replace($lines, $toReplace, $exp);
-	$exp = ($match)?'<div id="save_layer" class="flux-save">':'<div id="save_layer" class="flux-save editing">';
-	$toReplace = ($exp=='<div id="save_layer" class="flux-save editing">')?'<div id="save_layer" class="flux-save">':'<div id="save_layer" class="flux-save editing">';
+	$exp = ($match)?'<div id="save_layer" class="fx-editor js-fx-editor" style="display: none;">':'<div id="save_layer" class="fx-editor js-fx-editor is-editing" style="display: block;">';
+	$toReplace = ($exp=='<div id="save_layer" class="fx-editor js-fx-editor is-editing" style="display: block;">')?'<div id="save_layer" class="fx-editor js-fx-editor" style="display: none;">':'<div id="save_layer" class="fx-editor js-fx-editor is-editing" style="display: block;">';
 	$newlines2 = replace($newlines, $toReplace, $exp);
 	file_put_contents($file, $newlines2);
 	//if(isset($todelete)) unlink($todelete); //delete temporal file
@@ -76,11 +76,11 @@
 		$zip->close();
 		unlink(realpath('../indexTmp.html'));
 		header('Content-Description: File Transfer');
-			 header('Content-Type: application/octet-stream');
+		header('Content-Type: application/octet-stream');
 		header("Content-disposition: attachment; filename=flux.zip");
 		header("Content-length: " . filesize("../flux.zip"));
 		header("Pragma: no-cache");
-			header("Expires: 0");
+		header("Expires: 0");
 		readfile("../flux.zip");
 		exit;
 	} else header("Location: $togo");

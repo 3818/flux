@@ -40,7 +40,7 @@
 
 		<!-- Login lightbox -->
 		<div id="login_layer" class="fx-lightbox js-fx-lightobx--login">
-			<form method="post" action="php/process.php" id="fx-login" class="fx-lightbox__box fx-lightbox__box--login">
+			<form method="post" action="php/process.php" id="fx-login" class="fx-lightbox__box fx-lightbox__box--login ">
 				<div class="fx-lightbox__description js-fx-lightbox__description">
 					<h3>This is a demo</h3>
 					<p>Use <b>demo</b> as username and <b>demo</b> as password to login the editor.</p>
@@ -55,8 +55,8 @@
 		</div>
 
 		<!-- Panel editor -->
-		<div id="save_layer" class="fx-editor js-fx-editor">
-			<form method="post" action="php/process.php" id="save_form" class="fx-editor__panel">
+		<div id="save_layer" class="fx-editor js-fx-editor is-editing" style="display: block;">
+			<form method="post" action="php/process.php" id="save_form" class="fx-editor__panel is-editing">
 				<a href="http://getfluxnow.com" target="_blank" class="fx-cta fx-editor__logo js-fx-editor__logo" title="Flux Website"></a>
 				<input type="submit" name="Restore" value="Restore to Original" title="Warning! Back to original version" class="fx-cta fx-editor__restore">
 				<input type="submit" name="Export" value="Download .zip" title="Download a .zip" class="fx-cta fx-editor__export">
@@ -68,13 +68,13 @@
 		<!-- Login trigger -->
 		<div class="fx-logintrigger js-fx-logintrigger">
 			<span href="#top" class="fx-cta fx-logintrigger__button js-fx-logintrigger__button">
-				<i class="fa fa-lock fa-fw"></i> Log in
+				<i class="fa fa-key fa-fw"></i> Log in
 			</span>
 		</div>
 
 		<!-- Help lightbox -->
-		<div class="fx-lightbox fx-lightbox--tour">
-			<div class="fx-lightbox__box fx-lightbox__box--tour">
+		<div class="fx-lightbox fx-lightbox--help">
+			<div class="fx-lightbox__box fx-lightbox__box--help">
 				<img src="img/flux/tour.svg" alt="">
 				<span class="fx-cta js-trigger-help">Got it</span>
 			</div>

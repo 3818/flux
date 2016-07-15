@@ -16,6 +16,7 @@ $(document).ready(function(){
 	triggerLogin();
 	validationLogin();
 	panelInteraction();
+	loginVisible();
 	editModeVisible();
 	triggerHelp();
 	demo();
@@ -89,6 +90,7 @@ function triggerLogin() {
 		} else {
 			$('.js-fx-lightobx--login').show().css('display', 'flex');
 		}
+		loginVisible();
 	});
 
 	$('.js-fx-lightbox__close').on('click', function(e){
@@ -98,19 +100,36 @@ function triggerLogin() {
 		} else {
 			$('.js-fx-lightobx--login').hide();
 		}
+
+		loginVisible();
+
 	});
+
 }
 
 function panelInteraction() {
-	if ( $('.fx-editor').hasClass('editing') ) {
-		$('body').addClass('editing');
+	if ( $('.fx-editor').is(':visible') ) {
+		$('body').addClass('is-editing');
 		var fxpanelHei	= parseInt( $('.fx-editor').innerHeight() );
 		$('body').css('padding-bottom', ''+fxpanelHei+'px');
-		$('.fx-editor, .fx-editor__logo').addClass('editing');
+		$('.fx-editor__panel, .fx-editor__logo').addClass('is-editing');
+		setTimeout(function functionName() {
+			$('.fx-lightbox__box--help').addClass('is-active');
+		}, 200);
 	} else {
-		$('body').removeClass('editing');
+		$('body').removeClass('is-editing');
 		$('body').css('padding-bottom', '0px');
-		$('.js-fx-editor, .js-fx-editor__logo').removeClass('editing');
+		$('.js-fx-editor__panel, .js-fx-editor__logo').removeClass('is-editing');
+	}
+}
+
+function loginVisible() {
+	if ( $('.fx-lightbox__box--login').is(':visible') ) {
+		if ( $('.fx-lightbox__box--login').hasClass('is-active') ) {
+			$('.fx-lightbox__box--login').removeClass('is-active');
+		} else {
+			$('.fx-lightbox__box--login').addClass('is-active');
+		}
 	}
 }
 
@@ -121,7 +140,7 @@ function editModeVisible() {
 			e.preventDefault();
 		});
 		$('.js-fx-logintrigger__button').hide();
-		$('.fx-lightbox--tour').show().css('display', 'flex');
+		$('.fx-lightbox--help').show().css('display', 'flex');
 	}
 }
 
@@ -143,9 +162,19 @@ function demo() {
 	}
 }
 
+function helpVisible() {
+	if ( $('.fx-lightbox__box--help').is(':visible') ) {
+		if ( $('.fx-lightbox__box--help').hasClass('.is-active') ) {
+			$('.fx-lightbox__box--help').removeClass('.is-active');
+		} else {
+			$('.fx-lightbox__box--help').addClass('.is-active');
+		}
+	}
+}
+
 function triggerHelp() {
 	$('.js-trigger-help').on('click', function(){
-		$('.fx-lightbox--tour').fadeToggle('fast');
-		$('.fx-lightbox__box--tour').toggleClass('is-zoomout');
+		$('.fx-lightbox--help').fadeToggle('fast');
+		$('.fx-lightbox__box--help').toggleClass('is-active');
 	});
 }

@@ -9,6 +9,10 @@
 	&-core
 		font-family: 'Work Sans', sans-serif
 
+	&-content
+		@extend %bbx
+		@extend %clearfix
+		background-color: #fff
 
 	&-input
 		transition: box-shadow 0.3s ease 0s
@@ -58,7 +62,7 @@
 
 	&-lightbox
 		position: fixed
-		z-index: 1000
+		z-index: 1100
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -84,9 +88,9 @@
 		.fx-input
 			margin-bottom: 10px
 
-		&--tour
+		&--help
 			position: fixed
-			z-index: 1001
+			z-index: 1100
 			display: -webkit-flex
 			display: -moz-flex
 			display: -ms-flex
@@ -102,6 +106,7 @@
 
 		&__box
 			@extend %bbx
+			transition: transform 0.2s ease-out 0s, opacity 0.2s ease-out 0s
 			position: relative
 			display: block
 
@@ -110,8 +115,12 @@
 			box-shadow: 0 2px 3px rgba(0,0,0,0.5)
 			padding: 20px
 
+			transform: scale(0.75)
+			opacity: 0
+
 			@media screen and (max-width: 500px)
 				margin-top: 70px
+
 
 			&--login
 				width: 250px
@@ -121,12 +130,14 @@
 					margin-left: 0
 					width: 100%
 
-			&--tour
-				transition: transform 0.2s ease-out 0s, opacity 0.2s ease-out 0s
+				&.is-active
+					transform: scale(1)
+					opacity: 1
+
+
+			&--help
 				width: 90%
 				max-width: 550px
-
-				opacity: 1
 
 				text-align: center
 
@@ -142,9 +153,9 @@
 					min-width: 150px
 					display: block
 
-				&.is-zoomout
-					transform: scale(0.6)
-					opacity: 0
+				&.is-active
+					transform: scale(1)
+					opacity: 1
 
 
 
@@ -199,7 +210,7 @@
 
 		&__button
 			transition: all 0.2s ease 0s
-			display: inline-block
+			display: none
 
 			margin-right: auto
 			margin-left: auto
@@ -216,34 +227,35 @@
 
 
 	&-editor
+		transition: all 0.4s ease 0s
 		position: fixed
 		z-index: 1002
 		bottom: 0
 		left: 0
 		right: 0
 		display: none
+		transform: translateY(110px)
 
 		@media screen and (max-width: 500px)
 			transition: none
 
+		&.is-editing
+			transform: translateY(0)
+
+			.fx-editor__panel
+				padding: 10px 10px
+
 		&__panel
 			@extend %bbx
-			transition: all 0.4s ease 0.2s
+			transition: all 0.4s ease 0.1s
 			display: block
 
-			padding: 10px 10px
+			padding: 10px 40px
 			background-color: $flux-default // android6
 			border-top: 5px solid darken($flux-default, 30%) // android6
 			border-bottom: 1px solid darken($flux-default, 20%) // android6
 
 			text-align: right
-
-			// transform: translateY(110px)
-			// background-color: #fff
-			// background-color: lighten($flux-warning, 30%)
-
-			&.editing
-				transform: translateY(0)
 
 			.fx-cta
 				margin-left: 5px
@@ -263,17 +275,15 @@
 				background-color: darken($flux-error, 20%)
 
 		&__logo
+			transition: all 1.5s ease 0s
 			display: inline-block
 			transition: all 0.4s ease 0.3s
 			float: left
-			// width: 80px
-			// opacity: 0
-			// margin-left: 40px
-			// float: left
-			// background-color: lighten($flux-default, 20%)
+
 			margin-left: 0 !important
 			background-color: $flux-default
 			border: 1px solid $flux-primary !important
+			opacity: 0
 
 			color: $flux-primary
 
@@ -282,6 +292,7 @@
 
 			&:hover
 				background-color: darken($flux-default, 5%)
+				color: $flux-primary
 
 			&:active
 				color: $flux-primary
@@ -296,9 +307,9 @@
 			// 	display: none
 
 
-			&.editing
+			&.is-editing
 				opacity: 1
-				margin-left: 0
+				border-radius: 10px
 
 
 
@@ -328,10 +339,13 @@
 
 body
 	@extend %bbx
+	@extend %clearfix
 	position: relative
 	overflow-x: hidden
 	transition: all 0.4s ease 0s
 
-	&.editing
+	margin: 0
+
+	&.is-editing
 		padding: 5px
 		background-color: lighten($flux-primary, 30%)
