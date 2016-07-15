@@ -4,6 +4,7 @@
 *.rar
 *.tar.gz
 *.tar.xz
+tmp
 
 
 #Uncoment to prevent conflicts when +1 devs are pushing
