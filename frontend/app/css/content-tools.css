@@ -106,7 +106,7 @@ supported child elements.
 
 .ct-widget table, .ct-widget * table { border-collapse: collapse; border-spacing: 0; }
 
-.ct-widget { opacity: 0; font-family: arial, sans-serif; font-size: 14px; line-height: 18px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; z-index: 9999; -webkit-transition-property: opacity; -moz-transition-property: opacity; transition-property: opacity; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; transition-duration: 0.25s; -webkit-transition-timing-function: ease-in; -moz-transition-timing-function: ease-in; transition-timing-function: ease-in; }
+.ct-widget { opacity: 0; font-family: arial, sans-serif; font-size: 14px; line-height: 18px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; z-index: 999999; -webkit-transition-property: opacity; -moz-transition-property: opacity; transition-property: opacity; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; transition-duration: 0.25s; -webkit-transition-timing-function: ease-in; -moz-transition-timing-function: ease-in; transition-timing-function: ease-in; }
 
 .ct-widget--active { opacity: 1; -webkit-transition-property: opacity; -moz-transition-property: opacity; transition-property: opacity; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; transition-duration: 0.25s; -webkit-transition-timing-function: ease-in; -moz-transition-timing-function: ease-in; transition-timing-function: ease-in; }
 
@@ -117,7 +117,7 @@ supported child elements.
 
 .ct-widget .ct-attribute__name { background: #f6f6f6; border: none; color: #646464; float: left; height: 47px; outline: none; padding: 0 16px; font-family: arial, sans-serif; font-size: 14px; line-height: 48px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 25%; /** If the the attributes name is invalid then the `invalid` modifier is set against the input (programmatically). */ }
 
-.ct-widget .ct-attribute__name--invalid { color: #e74c3c; }
+.ct-widget .ct-attribute__name--invalid { color: #f03f4b; }
 
 .ct-widget .ct-attribute__value { -webkit-appearance: none; -moz-appearance: none; appearance: none; background: white; border: none; color: #646464; float: right; height: 47px; outline: none; padding: 0 16px; font-family: arial, sans-serif; font-size: 14px; line-height: 48px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 75%; }
 
@@ -167,7 +167,7 @@ supported child elements.
 
 .ct-widget { /** The controls section of the dialog features icon and text buttons which provide the user with controls for the contents dialog. */ /** Controls can be grouped left, right or centrally. Both a left and right group can coexist but the central group can only be used on it's own. */ /** Controls can either contain text or an icon depending on the modifier set against the component (`text` or `icon` respectively). */ /** The following classes relate to the various types of dialog available. */ /** The image dialog supports the insertion of images, the dialog has a number of states to support the various steps in inserting an image. */ /** The properties dialog displays the attributes and styles for an element in page, each property can by modified and each style turned on or off. */ /** The table dialog supports the insertion and updating of tables. */ /** The video dialog supports the insertion of embedded videos (vimeo and youtube). */ /** Anchored dialogs are a special type of dialog that are appear at a fixed position with the page, for example above a selection of text. They are used to support simple task (such as inserting a link) in a less intrusive mannor than full dialogs. Anchored dialogs support an single text input and a confirm button only. */ }
 
-.ct-widget.ct-dialog { background: white; box-shadow: 0 8px 8px rgba(0, 0, 0, 0.35); border-radius: 2px; height: 480px; left: 50%; margin-left: -350px; margin-top: -240px; position: fixed; top: 50%; width: 700px; z-index: 10099; /** The `busy` modifier maybe programatically applied to a dialog to prevent any further interaction with the dialog until a task has been completed. */ }
+.ct-widget.ct-dialog { background: white; box-shadow: 0 8px 8px rgba(0, 0, 0, 0.35); border-radius: 2px; height: 480px; left: 50%; margin-left: -350px; margin-top: -240px; position: fixed; top: 50%; width: 700px; z-index: 1000099; /** The `busy` modifier maybe programatically applied to a dialog to prevent any further interaction with the dialog until a task has been completed. */ }
 
 .ct-widget.ct-dialog--busy .ct-dialog__busy { display: block; }
 
@@ -295,7 +295,7 @@ supported child elements.
 
 .ct-widget .ct-properties-dialog__inner-html { border: none; display: block; font-family: courier, "Bitstream Vera Sans Mono", Consolas, Courier, monospace; height: 318px; padding: 16px; outline: none; resize: none; width: 100%; }
 
-.ct-widget .ct-properties-dialog__inner-html--invalid { color: #e74c3c; }
+.ct-widget .ct-properties-dialog__inner-html--invalid { color: #f03f4b; }
 
 .ct-widget .ct-table-dialog__view { border: 1px solid #ddd; overflow: auto; }
 
@@ -307,17 +307,17 @@ supported child elements.
 
 .ct-widget .ct-video-dialog__input:focus { border-bottom: 1px solid #e1e1e1; }
 
-.ct-widget.ct-anchored-dialog { border-bottom: 2px solid #27ae60; box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35); font-size: 0; height: 34px; left: 0; margin-left: -144px; margin-top: -48px; position: absolute; top: 0; z-index: 10099; }
+.ct-widget.ct-anchored-dialog { border-bottom: 2px solid #27ae60; box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35); font-size: 0; height: 34px; left: 0; margin-left: -144px; margin-top: -48px; position: absolute; top: 0; z-index: 1000099; }
 
 .ct-widget.ct-anchored-dialog:after { border: 16px solid rgba(255, 255, 255, 0); border-top-color: #27ae60; content: ''; left: 128px; position: absolute; top: 34px; }
 
 .ct-widget .ct-anchored-dialog__input { border: none; color: #646464; height: 32px; outline: none; font-family: arial, sans-serif; font-size: 14px; line-height: 32px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding: 0 8px 0 16px; vertical-align: top; width: 256px; }
 
-.ct-widget .ct-anchored-dialog__button { background: #27ae60; cursor: pointer; display: inline-block; height: 32px; line-height: 32px; text-align: center; font-family: 'icon'; font-size: 16px; font-style: normal; font-weight: normal; font-variant: normal; speak: none; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 32px; }
+.ct-widget .ct-anchored-dialog__button { background: #4db6ac; cursor: pointer; display: inline-block; height: 32px; line-height: 32px; text-align: center; font-family: 'icon'; font-size: 16px; font-style: normal; font-weight: normal; font-variant: normal; speak: none; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 32px; }
 
 .ct-widget .ct-anchored-dialog__button:before { color: white; content: '\ea10'; }
 
-.ct-widget .ct-anchored-dialog__button:hover { background: #2cc36b; }
+.ct-widget .ct-anchored-dialog__button:hover { background: #5fbdb4; }
 
 .ct-widget .ct-anchored-dialog__target-button { background: white; cursor: pointer; display: inline-block; height: 32px; line-height: 32px; text-align: center; font-family: 'icon'; font-size: 16px; font-style: normal; font-weight: normal; font-variant: normal; speak: none; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 32px; }
 
@@ -325,9 +325,9 @@ supported child elements.
 
 .ct-widget .ct-anchored-dialog__target-button:hover:before { color: #b1b1b1; }
 
-.ct-widget .ct-anchored-dialog__target-button--active:before { color: #27ae60; }
+.ct-widget .ct-anchored-dialog__target-button--active:before { color: #4db6ac; }
 
-.ct-widget .ct-anchored-dialog__target-button--active:hover:before { color: #2cc36b; }
+.ct-widget .ct-anchored-dialog__target-button--active:hover:before { color: #5fbdb4; }
 
 /** Flashes are used to display a visual confirmation to the user that an action has completed successfully (or failed). */
 .ct-widget { /** The flash animation displays an icon in the center of the user's screen that flashes into view and then out. */ /** The flash timer animation is used purely to indicated to the Javascript that created the flash element that the animation has finished. */ /** The icon that is flashed. */ }
@@ -430,7 +430,7 @@ supported child elements.
     -o-transform: opacity;
     transform: opacity; } }
 
-.ct-widget.ct-flash { color: rgba(255, 255, 255, 0.9); height: 0; left: 0; position: fixed; font-family: 'icon'; font-size: 16px; font-style: normal; font-weight: normal; font-variant: normal; speak: none; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; top: 0; width: 0; z-index: 10999; /** Modifiers that can be applied to the flash to change it's appearance. */ }
+.ct-widget.ct-flash { color: rgba(255, 255, 255, 0.9); height: 0; left: 0; position: fixed; font-family: 'icon'; font-size: 16px; font-style: normal; font-weight: normal; font-variant: normal; speak: none; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; top: 0; width: 0; z-index: 1000999; /** Modifiers that can be applied to the flash to change it's appearance. */ }
 
 .ct-widget.ct-flash:before { left: 50%; opacity: 0; position: fixed; text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); top: 50%; transform: translate(-50%, -50%); }
 
@@ -443,12 +443,6 @@ supported child elements.
 .ct-widget.ct-flash--no:before { content: '\ea0f'; }
 
 /** Grip's provide a visual hint to the user that they can use the mouse to drag an item (for example the toolbar has a grip that can be used to drag it to a new location. */
-.ct-widget .ct-grip { cursor: move; font-size: 0; text-align: center; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; /** Grips consist of one or more bumps, elements that appear to be sunk or raised and therefore provide grip. */ }
-
-.ct-widget .ct-grip__bump { background: rgba(70, 70, 70, 0.15); border-radius: 12px; display: inline-block; height: 12px; margin-left: 12px; width: 12px; }
-
-.ct-widget .ct-grip__bump:first-child { margin-left: 0; }
-
 /** The ignition switch is how users start and stop editing the page. */
 /** If the app is performing a remote task that requires the user to wait for a response from the server then the ignition may be set to a busy state. The busy state uses an animation (a rotating cog) defined below. */
 @-webkit-keyframes busy-ignition { 0% { transform: rotate(0deg);
@@ -474,7 +468,7 @@ supported child elements.
     -o-transform: transform;
     transform: transform; } }
 
-.ct-widget.ct-ignition { /** Position of the switch on the page */ left: 16px; position: fixed; top: 16px; /** Depending on the current state of the switch we show either the edit button (page ready to edit), or the confirm and cancel buttons ( page currently being edited). */ }
+.ct-widget.ct-ignition { /** Position of the switch on the page */ left: 16px; position: fixed; bottom: 54px; /** Depending on the current state of the switch we show either the edit button (page ready to edit), or the confirm and cancel buttons ( page currently being edited). */ }
 
 .ct-widget.ct-ignition .ct-ignition__button { display: none; }
 
@@ -488,9 +482,9 @@ supported child elements.
 
 .ct-widget .ct-ignition { /** The ignition switch is constructed of 3 buttons, edit, confirm and cancel. */ }
 
-.ct-widget .ct-ignition__button { border-radius: 24px; content: ''; cursor: pointer; display: block; height: 48px; line-height: 48px; opacity: 0.9; position: absolute; text-align: center; font-family: 'icon'; font-size: 24px; font-style: normal; font-weight: normal; font-variant: normal; speak: none; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 48px; /* Busy button */ /* Confirm button */ /* Cancel button */ /* Edit button */ }
+.ct-widget .ct-ignition__button { border-radius: 21px; content: ''; cursor: pointer; display: block; height: 42px; line-height: 38px; opacity: 0.9; position: absolute; text-align: center; font-family: 'icon'; font-size: 24px; font-style: normal; font-weight: normal; font-variant: normal; speak: none; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 42px; /* Busy button */ /* Confirm button */ /* Cancel button */ /* Edit button */ }
 
-.ct-widget .ct-ignition__button:before { color: white; }
+.ct-widget .ct-ignition__button:before { color: white; font-size: 18px; }
 
 .ct-widget .ct-ignition__button--busy { -webkit-animation: busy-ignition 5s linear; -moz-animation: busy-ignition 5s linear; animation: busy-ignition 5s linear; -webkit-animation-iteration-count: infinite; -moz-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards; animation-fill-mode: forwards; background: #646464; cursor: default; }
 
@@ -498,30 +492,30 @@ supported child elements.
 
 .ct-widget .ct-ignition__button--busy:hover { background: #646464; }
 
-.ct-widget .ct-ignition__button--confirm { background: #27ae60; }
+.ct-widget .ct-ignition__button--confirm { background: #4db6ac; }
 
 .ct-widget .ct-ignition__button--confirm:before { content: '\ea10'; }
 
-.ct-widget .ct-ignition__button--confirm:hover { background: #2cc36b; }
+.ct-widget .ct-ignition__button--confirm:hover { background: #5fbdb4; }
 
-.ct-widget .ct-ignition__button--cancel { background: #e74c3c; left: 64px; }
+.ct-widget .ct-ignition__button--cancel { background: #f03f4b; left: 50px; }
 
 .ct-widget .ct-ignition__button--cancel:before { content: '\ea0f'; }
 
-.ct-widget .ct-ignition__button--cancel:hover { background: #ea6153; }
+.ct-widget .ct-ignition__button--cancel:hover { background: #f25761; }
 
-.ct-widget .ct-ignition__button--edit { background: #2980b9; /** Unlike the confirm and cancel buttons we rotate the edit button's pencil icon on mouse over to add a sense of purpose :) */ }
+.ct-widget .ct-ignition__button--edit { background: #4db6ac; /** Unlike the confirm and cancel buttons we rotate the edit button's pencil icon on mouse over to add a sense of purpose :) */ }
 
 .ct-widget .ct-ignition__button--edit:before { content: '\e905'; -webkit-transition-property: -webkit-transform; -moz-transition-property: -moz-transform; transition-property: transform; -webkit-transition-duration: 0.1s; -moz-transition-duration: 0.1s; transition-duration: 0.1s; -webkit-transition-timing-function: ease-in; -moz-transition-timing-function: ease-in; transition-timing-function: ease-in; }
 
-.ct-widget .ct-ignition__button--edit:hover { background: #2e8ece; }
+.ct-widget .ct-ignition__button--edit:hover { background: #5fbdb4; }
 
 .ct-widget .ct-ignition__button--edit:hover:before { display: inline-block; -webkit-transform: rotate(-15deg); -moz-transform: rotate(-15deg); -ms-transform: rotate(-15deg); -o-transform: rotate(-15deg); transform: rotate(-15deg); }
 
 /** The inspector provides a breadcrumb style path (constructured from tags) for the currently selected element and its parent/ancestor tags. Tags can be selected which triggers the properties dialog. This allows elements which typically can't be directly selected using the editor to be modified. */
 .ct-widget { /** The inspector bar is consists of a list of one or more tags, each tag represents an element in the lineage between the currently selected element and the top level element it is defined within, e.g for a table division the path might look like this: table > tbody > tr > td */ }
 
-.ct-widget.ct-inspector { background: rgba(233, 233, 233, 0.2); border-top: 1px solid rgba(255, 255, 255, 0.1); bottom: 0; height: 32px; left: 0; overflow: hidden; padding: 3px 16px 0; position: fixed; width: 100%; }
+.ct-widget.ct-inspector { background: rgba(236, 239, 241, 0.2); border-top: 1px solid rgba(255, 255, 255, 0.1); bottom: 0; height: 32px; left: 0; overflow: hidden; padding: 3px 16px 0; position: fixed; width: 100%; display: none; }
 
 .ct-widget .ct-inspector__tags::after { clear: both; content: ""; display: table; }
 
@@ -586,7 +580,7 @@ supported child elements.
 .ct-widget .ct-tag:nth-child(6):hover:after { border-left-color: #19b698; }
 
 /** The modal widget provides a layer over the page limiting interaction to just the components positioned above the layer. This is commonly used when displaying a dialog, for example if we're editing a table's properties then the modal ensures the user can't change the element selected on the page while the dialog is open. */
-.ct-widget.ct-modal { background: rgba(0, 0, 0, 0.7); height: 0; left: 0; position: fixed; top: 0; width: 0; z-index: 10009; }
+.ct-widget.ct-modal { background: rgba(0, 0, 0, 0.7); height: 0; left: 0; position: fixed; top: 0; width: 0; z-index: 1000009; }
 
 .ct-widget.ct-modal--transparent { background: transparent; }
 
@@ -620,24 +614,24 @@ supported child elements.
 
 .ct-widget .ct-section__input { background: white; border: none; color: #646464; float: right; height: 47px; outline: none; padding: 0 16px; text-align: right; font-family: arial, sans-serif; font-size: 14px; line-height: 48px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 25%; /** If the contents of the sections input is invalid then the `invalid` modifier is set against the input (programmatically). */ }
 
-.ct-widget .ct-section__input--invalid { color: #e74c3c; }
+.ct-widget .ct-section__input--invalid { color: #f03f4b; }
 
 /** The toolbox widget displays a set of tools the user can use to edit the content of the page. */
 .ct-widget { /** Define the spacing for the toolbox: spacing / 1 = the padding around the contents of the toolbox. spacing / 1 = the vertical padding around the toolbox's grip. spacing / 2 = the margin between each tool. spacing / 2 = the vertical padding around each tool group. */ /** The size of a tool. */ /** The grip is positioned at the top of the toolbox. If the user clicks and holds the mouse down whilst over the grip then the toolbox will be draggable until they release the mouse button. */ /** Tools are organized into groups of related tools. */ /** The toolbox features a set of tools for editing the page content. */ }
 
-.ct-widget.ct-toolbox { /** The position of the toolbox is typically determined by the position the user last placed it (this information is stored in local storage). However we set a default position for the first time the toolbox is displayed. */ background: rgba(233, 233, 233, 0.9); border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35); left: 128px; padding: 8px; position: fixed; top: 128px; width: 138px; /** When the toolbox is being dragged to a new position by the user the dragging modifier is applied. Whilst being dragged we reduce the opacity of the toolbox to make it easier for the user to see the content being dragged over. */ }
+.ct-widget.ct-toolbox { /** The position of the toolbox is typically determined by the position the user last placed it (this information is stored in local storage). However we set a default position for the first time the toolbox is displayed. */ background: #eceff1; border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35); left: 128px; padding: 8px; position: fixed; z-index: 99999; bottom: 0; left: 0; right: 0; top: auto !important; /** When the toolbox is being dragged to a new position by the user the dragging modifier is applied. Whilst being dragged we reduce the opacity of the toolbox to make it easier for the user to see the content being dragged over. */ }
 
-.ct-widget.ct-toolbox--dragging { opacity: 0.5; }
+.ct-widget.ct-toolbox--dragging { opacity: 0.5; display: none; }
 
-.ct-widget .ct-toolbox__grip { padding: 8px 0; }
+.ct-widget .ct-toolbox__grip { display: none; }
 
-.ct-widget .ct-tool-group { /** Tools are floated to align horizontally so each group must clear its children. */ padding: 4px 0; }
+.ct-widget .ct-tool-group { /** Tools are floated to align horizontally so each group must clear its children. */ display: inline-block; float: right; }
 
 .ct-widget .ct-tool-group::after { clear: both; content: ""; display: table; }
 
 .ct-widget .ct-tool-group:first-child { padding-top: 0; }
 
-.ct-widget .ct-tool { border-radius: 2px; color: #464646; cursor: pointer; float: left; height: 32px; margin: 4px; margin-right: 4px; position: relative; text-align: center; font-family: 'icon'; font-size: 16px; font-style: normal; font-weight: normal; font-variant: normal; speak: none; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 32px; /** Tools are displayed in rows of 3 so re remove margin from the last (3rd) tool in every row. */ /** The following modifiers reflect the state of the tool. */ /** The tools is currently disabled and cannot be selected (the hover style is also disabled). */ /** The button has been clicked on and the mouse button is still in the down state. */ /** The tool is currently applied to the selected element, and if there is one text selection. */ /** Each of the modifiers below sets the content of the puesdo before element to match the required icon. The list is ordered by the position each tool in the default toolbox (as opposed to alphabetically). */ }
+.ct-widget .ct-tool { border-radius: 2px; color: #464646; cursor: pointer; float: left; height: 32px; margin: 4px; margin-right: 4px; margin-top: 7px; margin-bottom: 7px; position: relative; text-align: center; font-family: 'icon'; font-size: 16px; font-style: normal; font-weight: normal; font-variant: normal; speak: none; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 32px; /** Tools are displayed in rows of 3 so re remove margin from the last (3rd) tool in every row. */ /** The following modifiers reflect the state of the tool. */ /** The tools is currently disabled and cannot be selected (the hover style is also disabled). */ /** The button has been clicked on and the mouse button is still in the down state. */ /** The tool is currently applied to the selected element, and if there is one text selection. */ /** Each of the modifiers below sets the content of the puesdo before element to match the required icon. The list is ordered by the position each tool in the default toolbox (as opposed to alphabetically). */ }
 
 .ct-widget .ct-tool:after { background: black; border-radius: 2px; color: white; content: attr(data-tooltip); display: block; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; left: -26.5px; line-height: 20px; opacity: 0.0; padding: 0 8px; position: absolute; bottom: 37px; font-family: arial, sans-serif; font-size: 12px; line-height: 20px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; visibility: hidden; width: 85px; word-break: break-word; }
 
@@ -702,6 +696,36 @@ supported child elements.
 .ct-widget .ct-tool--redo:before { content: "\e966"; }
 
 .ct-widget .ct-tool--remove:before { content: "\e9ac"; }
+
+.ct-widget .ct-tool--heading { display: none; }
+
+.ct-widget .ct-tool--subheading { display: none; }
+
+.ct-widget .ct-tool--paragraph { display: none; }
+
+.ct-widget .ct-tool--preformatted { display: none; }
+
+.ct-widget .ct-tool--align-left { display: none; }
+
+.ct-widget .ct-tool--align-center { display: none; }
+
+.ct-widget .ct-tool--align-right { display: none; }
+
+.ct-widget .ct-tool--unordered-list { display: none; }
+
+.ct-widget .ct-tool--ordered-list { display: none; }
+
+.ct-widget .ct-tool--table { display: none; }
+
+.ct-widget .ct-tool--indent { display: none; }
+
+.ct-widget .ct-tool--unindent { display: none; }
+
+.ct-widget .ct-tool--line-break { display: none; }
+
+.ct-widget .ct-tool--image { display: none; }
+
+.ct-widget .ct-tool--video { display: none; }
 
 /** The highlight class below is used to highlight editable regions within the page to users to help them see what they can edit. It's slightly unusual in that it's specified as a modifier of `ct`. */
 @-webkit-keyframes highlight { 0% { outline-color: rgba(255, 255, 255, 0);

@@ -82,8 +82,6 @@
 
 .fx-editor__panel .fx-cta { margin-left: 5px; padding: 0.8rem 1rem; }
 
-@media screen and (max-width: 500px) { .fx-editor__panel .fx-cta { padding: 0.6rem 1rem; } }
-
 @media screen and (max-width: 768px) { .fx-editor__export, .fx-editor__restore { display: none; } }
 
 .fx-editor__restore { background-color: #f03f4b; }

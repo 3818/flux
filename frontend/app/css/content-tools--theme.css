@@ -9,15 +9,18 @@
 
 /* Pencil "edit" button */
 .ct-widget .ct-ignition__button--edit {
-	background-color: #0CACFC;
+	background-color: #4db6ac;
 	width: 48px !important;
 	height: 48px !important;
 	border-radius: 48px !important;
 	font-size: 20px !important;
 	line-height: 48px !important;
 	left: 10px;
-	top: 10px;
-	
+	bottom: 10px;
+}
+
+.ct-widget .ct-ignition__button--edit:hover {
+	background-color: #3c948b;
 }
 
 .ct-widget .ct-ignition__button--cancel {
@@ -35,7 +38,7 @@
 /* WYSYWYG panel */
 .ct-widget.ct-toolbox {
 	position: fixed;
-	top: 0;
+	bottom: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
