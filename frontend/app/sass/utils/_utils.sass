@@ -1,42 +1,9 @@
 @import "_mixins.sass"
 @import "_buttons.sass"
 
-.wrapper
-	@extend %clearfix
-	@extend %bbx
-	position: relative
-	width: 100%
-	margin-right: auto
-	margin-left: auto
-	// &.mid
-	&.full
-		padding-left: 0
-		padding-right: 0
-	&.xxl
-		max-width: 1920px
-		padding-left: 0
-		padding-right: 0
-	&.xl
-		max-width: 1600px
-	&.lg
-		max-width: 1170px
-	&.md
-		max-width: 970px
-	&.sm
-		max-width: 750px
-	&.xs
-		max-width: 450px
-
 body
 	margin: 0
 	padding: 0
-
-/* Activate i necesary */
-// input, select, textarea, button
-// 	-webkit-appearance: none
-// 	-moz-appearance: none
-// 	-ms-appearance: none
-// 	appearance: none
 
 textarea
 	font-size: 1em
@@ -44,6 +11,47 @@ textarea
 
 input
 	font-size: 1em
+
+/* Activate if necesary */
+// input, select, textarea, button
+// 	-webkit-appearance: none
+// 	-moz-appearance: none
+// 	-ms-appearance: none
+// 	appearance: none
+
+
+.wrapper
+	@extend %clearfix
+	@extend %bbx
+	position: relative
+	width: 100%
+	margin-right: auto
+	margin-left: auto
+
+	&--full
+		padding-left: 0
+		padding-right: 0
+
+	&--xxl
+		max-width: 1920px
+		padding-left: 0
+		padding-right: 0
+
+	&--xl
+		max-width: 1600px
+
+	&--lg
+		max-width: 1170px
+
+	&--md
+		max-width: 970px
+
+	&--sm
+		max-width: 750px
+
+	&--xs
+		max-width: 450px
+
 
 .air
 	@extend %bbx
