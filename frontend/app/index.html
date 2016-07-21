@@ -37,6 +37,9 @@
 	<link rel="stylesheet" href="css/flux.css">
 	<link rel="stylesheet" href="css/content-tools.css">
 
+	<!-- NOTE: ONLY FOR STARTER TEMPLATE -->
+	<link rel="stylesheet" href="css/demo.css">
+
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -98,33 +101,44 @@
 
 	<main role="main" class="fx-content"><!-- NOTE: Start Flux Content » -->
 
-		<article class="wrapper md air air--hor">
+		<article class="air air--horz">
 			<!-- el div con el id="title-xxxx" data-name="title-xxxx" y  siempre debe ir lo mas próximo al contenido, no puede haber divs dentro de él ni <span> sueltos-->
-			<span>Welcome to Flux</span>
-			<div id="title-xxxx" data-editable data-name="title-xxxx">
-				<hr>
-				<h2>This frame is editable</h2>
-				<p>
-					This is a editable paragraph. Each editable content should be in a div with the following attributes <br>
-					ID: id="title-xxxx" <br>
-					DATA: data-name="title-xxxx" <br>
-					ATTR: data-editable <br>
-					<br>
-					Ex: <b>&lt;div id="title-xxxx" data-editable data-name="title-xxxx"&gt; <i><u>your content</u></i> &lt;/div&gt;</b><br>
-					<br>
-					The <b>&lt;div&gt;</b> tags shouldn't be within editable frame.
-				</p>
-				<hr>
+			<div class="wrapper wrapper--sm">
+
+				<h1 class="welcome">Welcome to FLUX® Editor</h1>
+				<div class="demo air">
+
+					<div id="title-xxxx" data-editable data-name="title-xxxx">
+						<h2>This frame is editable</h2>
+						<p>
+							This is a editable paragraph. Each editable content should be in a <b>div</b> with the following attributes <br>
+							<br>
+							<span>ID: id="title-xxxx"</span>
+							<span>DATA: data-name="title-xxxx"</span>
+							<span>ATTR: data-editable</span>
+							<br>
+							Ex: <b>&lt;div id="title-xxxx" data-editable data-name="title-xxxx"&gt; <i><u>your content</u></i> &lt;/div&gt;</b><br>
+							<br>
+							The <b>&lt;div&gt;</b> tags shouldn't be within editable frame.
+						</p>
+					</div>
+					<p class="trymenow js-fx-logintrigger__button">
+						Try me with <b>"admin : admin"</b>
+					</p>
+				</div>
+
+				<div class="tech air">
+					<p>
+						FLUX® use <a href="http://fontawesome.io/cheatsheet/" title="Cheatsheet">FontAwesome <i class="fa fa-check"></i></a>  (from <a href="https://www.bootstrapcdn.com/fontawesome/">Bootstrap CDN</a>)
+					</p>
+					<div class="credits">
+						<a href="http://3818.com.ar" title="3818.com.ar" target="_blank">
+							<img src="img/flux/3818.svg" alt="3818 Logo">
+						</a>
+					</div>
+				</div>
 			</div>
-			<p>
-				Flux use FontAwesome <i class="fa fa-check"></i> from <a href="https://www.bootstrapcdn.com/fontawesome/">Bootstrap CDN</a>
-			</p>
-			<div class="credits">
-				<p>Flux is developed by <a href="http://3818.com.ar" title="3818.com.ar" target="_blank">3818</a></p>
-				<a href="http://3818.com.ar" title="3818.com.ar" target="_blank">
-					<img src="img/flux/3818.svg" alt="3818 Logo" style="width: 100px">
-				</a>
-			</div>
+
 		</article>
 
 	</main><!-- XXX: « Body Content -->
