@@ -1,9 +1,3 @@
-%clearfix
-	&:after
-		content: ""
-		display: table
-		clear: both
-
 .fx
 
 	&-core
@@ -26,7 +20,6 @@
 			box-shadow: inset 0 2px 1px transparentize(#000, 0.9)
 
 	&-cta
-		// font-family: 'Work Sans', sans-serif
 		display: inline-block
 
 		padding: 0.5rem 1rem
@@ -57,7 +50,6 @@
 
 		&--disabled
 			opacity: 0.4
-			// background-color: #4a4a4a !important
 
 
 	&-lightbox
@@ -98,7 +90,6 @@
 			display: flex
 			align-items: center
 			justify-content: center
-			// !important abajo
 			display: none
 
 			@media screen and (max-width: 500px)
@@ -319,13 +310,11 @@
 				color: $flux-primary
 
 			@media screen and (max-width: 640px)
-				// width: 82px
 				transition: none
 
 			@media screen and (max-width: 500px)
 				&::after
 					content: "F"
-			// 	display: none
 
 			&.is-editing
 				opacity: 1

@@ -1,8 +1,12 @@
 .fx-content:after, .fx-logintrigger:after, body:after { content: ""; display: table; clear: both; }
 
-.fx-content, .fx-input, .fx-lightbox__box, .fx-logintrigger, .fx-editor__panel, body, .fx-errormsg { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
+.fx-errormsg, .fx-content, .fx-input, .fx-lightbox__box, .fx-logintrigger, .fx-editor__panel, body { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
 
-.fx-content:after, .fx-logintrigger:after, body:after { content: ""; display: table; clear: both; }
+.fx-errormsg { width: 100%; display: none; margin-bottom: 10px; padding-right: 10px; padding-left: 10px; padding: 5px; font-size: 14px; text-align: center; }
+
+.fx-errormsg::after { content: '\0000a0'; }
+
+.fx-errormsg.fx-val-error { border-color: #f03f4b; color: #f03f4b; }
 
 .fx-core { font-family: 'Work Sans', sans-serif; }
 
@@ -113,11 +117,5 @@
 body { position: relative; overflow-x: hidden; transition: all 0.4s ease 0s; margin: 0; }
 
 body.is-editing { padding: 5px; background-color: #94a5b0; }
-
-.fx-errormsg { width: 100%; display: none; margin-bottom: 10px; padding-right: 10px; padding-left: 10px; padding: 5px; font-size: 14px; text-align: center; }
-
-.fx-errormsg::after { content: '\0000a0'; }
-
-.fx-errormsg.fx-val-error { border-color: #f03f4b; color: #f03f4b; }
 
 /*# sourceMappingURL=flux.css.map */
