@@ -1,0 +1,52 @@
+.wrapper:after { content: ""; display: table; clear: both; }
+
+.wrapper, .air { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
+
+body { margin: 0; padding: 0; }
+
+textarea { font-size: 1em; resize: none; }
+
+input { font-size: 1em; }
+
+.wrapper { position: relative; width: 100%; margin-right: auto; margin-left: auto; }
+
+.wrapper--full { padding-left: 0; padding-right: 0; }
+
+.wrapper--xxl { max-width: 1920px; padding-left: 0; padding-right: 0; }
+
+.wrapper--xl { max-width: 1600px; }
+
+.wrapper--lg { max-width: 1170px; }
+
+.wrapper--md { max-width: 970px; }
+
+.wrapper--sm { max-width: 750px; }
+
+.wrapper--xs { max-width: 450px; }
+
+.air { padding: 10px; }
+
+.air--horz { padding: 0 10px; }
+
+.air--vert { padding: 10px 0; }
+
+/* DEMO STYLES */
+body { font-family: sans-serif; padding-top: 30px; }
+
+.demo { background-color: #b2bec4; border-radius: 5px; padding: 20px; }
+
+.demo span { display: block; background-color: #95a6ae; padding: 10px; }
+
+a { text-decoration: none; color: #4a5960; }
+
+.welcome { margin: 0; font-size: 32px; padding-top: 20px; padding-bottom: 20px; }
+
+.tech { position: relative; margin-top: 20px; margin-bottom: 50px; border-radius: 5px; }
+
+.trymenow { display: inline-block; background-color: #4a5960; padding: 5px 15px; color: #fff; cursor: pointer; border-radius: 50px; }
+
+.credits { margin-top: 30px; }
+
+.credits img { bottom: 5px; left: 5px; width: 150px; }
+
+/*# sourceMappingURL=demo.css.map */

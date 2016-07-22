@@ -1,0 +1,22 @@
+// Validation
+.fx
+
+	&-errormsg
+		@extend %bbx
+		width: 100%
+		display: none
+
+		margin-bottom: 10px
+		padding-right: 10px
+		padding-left: 10px
+		padding: 5px
+
+		font-size: 14px
+		text-align: center
+
+		&::after
+			content: '\0000a0'
+
+		&.fx-val-error
+			border-color: $flux-error
+			color: $flux-error

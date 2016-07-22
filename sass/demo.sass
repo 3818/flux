@@ -1,0 +1,121 @@
+%clearfix
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+%bbx
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	-ms-box-sizing: border-box
+	-o-box-sizing: border-box
+	box-sizing: border-box
+
+%bgcover
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	background-size: cover
+
+body
+	margin: 0
+	padding: 0
+
+textarea
+	font-size: 1em
+	resize: none
+
+input
+	font-size: 1em
+
+.wrapper
+	@extend %clearfix
+	@extend %bbx
+	position: relative
+	width: 100%
+	margin-right: auto
+	margin-left: auto
+
+	&--full
+		padding-left: 0
+		padding-right: 0
+
+	&--xxl
+		max-width: 1920px
+		padding-left: 0
+		padding-right: 0
+
+	&--xl
+		max-width: 1600px
+
+	&--lg
+		max-width: 1170px
+
+	&--md
+		max-width: 970px
+
+	&--sm
+		max-width: 750px
+
+	&--xs
+		max-width: 450px
+
+
+.air
+	@extend %bbx
+	padding: 10px
+
+	&--horz
+		padding: 0 10px
+
+	&--vert
+		padding: 10px 0
+
+
+/* DEMO STYLES */
+
+$editable: #4a5960
+
+body
+	font-family: sans-serif
+	padding-top: 30px
+
+.demo
+	background-color: lighten($editable, 40%)
+	border-radius: 5px
+	padding: 20px
+
+	span
+		display: block
+		background-color: lighten($editable, 30%)
+		padding: 10px
+a
+	text-decoration: none
+	color: $editable
+
+.welcome
+	margin: 0
+	font-size: 32px
+	padding-top: 20px
+	padding-bottom: 20px
+
+.tech
+	position: relative
+	margin-top: 20px
+	margin-bottom: 50px
+	border-radius: 5px
+
+.trymenow
+	display: inline-block
+	background-color: $editable
+	padding: 5px 15px
+	color: #fff
+	cursor: pointer
+	border-radius: 50px
+
+.credits
+	margin-top: 30px
+
+	img
+		bottom: 5px
+		left: 5px
+		width: 150px
