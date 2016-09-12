@@ -1,5 +1,9 @@
 # FLUX®
 
+[Demo](http://dev.3818.com.ar/fluxgit)
+
+[Documentación](https://3818devarg.gitbooks.io/flux-documentation/content/)
+
 ####¿Qué es FLUX®?
 Flux nace con el propósito de construir un sitio de contenido editable en simples pasos y de manera rápida. Los dos objetivos que pretende cubrir FLUX® son para el **usuario** y para el **desarrollador frontend**.
 El **usuario final**, debe ser capaz de entrar en su sitio FLUX®, iniciar su sesión y editar el contenido; guardar y salir.
