@@ -1,8 +1,0 @@
-To install any .sh file open terminal in current folder and type
-./file.sh
-
-To install packages from "npm" and "bower" execute the followin line:
-./install_packages.sh
-
-If you need to create the folder structure, execute the following line:
-./make_directories.sh
