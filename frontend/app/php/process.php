@@ -67,10 +67,10 @@
 				$fileName = $tmp[sizeof($tmp)-1];
 				if(array_search($fileName, $skip)) continue;
 				$filePath = $file->getRealPath();
-				$path = substr($filePath, strpos($filePath, $folders[$i]));
-				//if($filePath==$path || !is_file($fileName)) continue; <-FOR THE SERVER UNCOMENT THIS LINE !!!!!
-				//echo "$ext - Agrego: $filePath   COMO   $path<br>";
-				$zip->addFile($filePath,  $path);
+				$filetoadd = substr($filePath, strpos($filePath, $folders[$i]));
+				if(!is_file("../$filetoadd")) continue;
+				//echo "$ext - Agrego: $filePath   COMO   $filetoadd<br>";
+				$zip->addFile($filePath,  $filetoadd);
 			}
 		}
 		$zip->close();
