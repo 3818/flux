@@ -86,6 +86,7 @@ function triggerLogin() {
 	$('.js-fx-logintrigger__button').on('click', function(e){
 		e.preventDefault();
 		$('.js-fx-lightobx--login').fadeIn('fast').css('display', 'flex');
+		// $('#fx-login__user').focus();
 		loginVisible();
 	});
 
@@ -120,6 +121,7 @@ function loginVisible() {
 			$('.fx-lightbox__box--login').addClass('is-active');
 		}
 	}
+	$('#fx-login__user').focus();
 }
 
 function editModeVisible() {
